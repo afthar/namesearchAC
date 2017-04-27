@@ -49,8 +49,8 @@ Create User_receiver<N> and User_sender, where N is from 'one'...'Five' (6 users
   repeat for edit comment, new and edit annotation
 
 
-## UI automated Test script example:
-
+### UI automated Test script example using webdriver driven by Python:
+```
 test_setup():
   for postfix in ['one', 'two', 'three', 'four']
     user.create('User_receiver' + postfix) # user class instantiated in suite setup self. is omitted
@@ -68,6 +68,33 @@ test_case_1():
     else return False
 
   test_teardown():
+```
+
+  ### API test example using [**FrisbyJS** API test framework](frisbyjs.com) :
+
+  1. Set up mockup interface in any mockup framework. In this example I use [Mocky.io (HTTP responses to test REST API)](mocky.io)
+
+  2. frisbyjs script with example to partially cover AC 1:
+
+  ```
+  baselink = 'http://www.mocky.io/v2/'
+  mockupID = '5185415ba171ea3a00704eed'
+  // mockup endpooint was generated using mocky.io on 28 April. It may expire in a whipe
 
 
-  ## API test example in js:
+  // Consumer contract acceptane test suite
+
+  // Test case 1. Verifies acceptane criteria 1: return active user on tapping '@ReceiverUserF'
+
+```
+  var frisby = require('frisby');
+  frisby.create('Get active user on typing /@ReceiverUserF')
+    .get(baselink + mockupID)
+    .expectStatus(200)
+    .expectHeaderContains('content-type', 'application/json')
+    .expectJSON('0', {
+      place: function(val) { expect(val).toMatch("ReceiverUserFour"); }, //
+    })
+  .toss();
+
+  ```
