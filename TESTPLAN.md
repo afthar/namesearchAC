@@ -16,7 +16,28 @@ __Assumptions:__
 
 **Q:** Specify exactly what steps you would run. And how you would assess success or failure of each test.
 
-**A: **
+**A: Test suite:**
+
+##### Test setup:
+Create `User_receiver<N>` and `User_sender`, where `N` is a tuple of strings from `one` to `Five` (6 users in total)
+
+##### Test case:
+
+1. In different browsers or browser sessions (use incognito or private to disable cookies) open user `User_receiver` and `User_sender` message box.
+
+2. Create new comment and start tying @.
+    > - [ ] Pass if 4 users appeared to choose from. This validates "Maximum 4 users AC"
+
+3. In receiver browser login as User_receiverFour. Start typing @User_receiver4
+  > - [ ] Pass if only 1 user User_receiverFour is offered to be chosen
+
+4. Choose offered user
+  >- [ ] Pass if highlighted user name should appear in chat box
+
+5. Type User_receiver6
+  >- [ ] Pass if user is of different colour
+
+6. Repeat 1-5 for edit comment, new and edit annotation
 
 **Q:** Feel free to comment on the completeness or quality of the acceptance criteria.
 
@@ -41,27 +62,6 @@ __Assumptions:__
 - is automation needed? How often regression testing and AC  test should be run.
 - if tester can access the code or backend logs to utilise white box testing approach
 - was error handling, reporting and monitoring implemented?
-
-
-
-
-
-
-## Test setup:
-Create User_receiver<N> and User_sender, where N is from 'one'...'Five' (6 users in total)
-
-## Test case:
-1. In different browsers or browser sessions (use incognito or private to disable cookies) open user User_receiver snd User_sender message box.
-2. Create new comment and start tying @
-  Pass if 4 users appeared to choose from. This validates "Maximum 4 users AC"
-3. In receiver browser login as User_receiverFour. Start typing @User_receiver4
-  Pass if only 1 user User_receiverFour is offered to be chosen
-4. Choose offered user
-  Pass if highlighted user name should appear in chat box
-5. Type User_receiver6
-  Pass if user is of different colour
-
-  repeat for edit comment, new and edit annotation
 
 
 ### UI automated Test script example using webdriver driven by Python:
