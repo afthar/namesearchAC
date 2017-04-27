@@ -1,14 +1,35 @@
-Develop a test plan for the following user story.
-How would you test this story? Specify exactly what steps you would run, and how you would
-assess success or failure of each test. Feel free to comment on the completeness or quality of the
-acceptance criteria. Note any additional information you will need before you can begin
-testing.
+# Assignment:
 
-> As a user, I want to be able to notify another user about a comment I made so that my
+Develop a test plan for the following user story:
+> As a user, I want to be able to notify another user about a comment I made so that my comment get action faster
 
-comment gets actions faster.
+**Q:** How would you test this story?
 
-## Additional info:
+**A: **
+
+**Q:** Specify exactly what steps you would run.
+
+**A: **
+
+**Q:** How you would assess success or failure of each test.
+
+**A: **
+
+**Q:** Feel free to comment on the completeness or quality of the acceptance criteria.
+
+**A: Comments on AC**
+- doesn't specify multi-language support.
+- criterion of active user (session expired or other status indiction and means to test)
+- in #5 "existing functionality" missing reference data
+-
+
+- After tapping @ the performance might be compromised due to many active users. AC doesn't specify this edge case scenario.
+- User name length
+
+**Q**: Additional information you will need before you can begin testing.
+
+**A: Additional info:**
+
 - what is the objective of testing? Presumably it is AC but since it is not specified, that could be non-functional AC, ex. security.
 - what platform? Browsers?
 - surely beneficial extra background information about the app. What is business logic and domain. Who is the user?
@@ -22,14 +43,7 @@ comment gets actions faster.
 - it is web application
 - time resource proposed: 1 hour. 15 minutes test setup, 30 minutes testing, 15 minutes for test notes and submitting issues
 
-## Comments on AC
-- doesn't specify multi-language support.
-- criterion of active user (session expired or other status indiction and means to test)
-- in #5 "existing functionality" missing reference data
--
 
-- After tapping @ the performance might be compromised due to many active users. AC doesn't specify this edge case scenario.
-- User name length
 
 
 ## Test setup:
