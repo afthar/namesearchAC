@@ -141,8 +141,9 @@ test_case_1():
   mockupID = '5185415ba171ea3a00704eed'
   // mockup endpoint was generated using mocky.io on 28 April. It may expire in a while
 
-`Consumer contract acceptance test suite. Test case 1. `
-```
+  // Consumer contract acceptance test suite
+  // Test case 1. Verifies acceptance criteria 1
+
   var frisby = require('frisby');
   frisby.create('Get active user on typing /@ReceiverUserF')
     .get(baselink + mockupID)
@@ -152,4 +153,4 @@ test_case_1():
       place: function(val) { expect(val).toMatch("ReceiverUserFour"); }, //
     })
   .toss();
-```
+  ```
