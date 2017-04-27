@@ -3,26 +3,31 @@
 Develop a test plan for the following user story:
 > As a user, I want to be able to notify another user about a comment I made so that my comment get action faster
 
+-----
+
 **Q:** How would you test this story?
 
 **A: Approach**
 1. I'd gather more background information first, as this story is clearly taken from the bigger context. Without that information preparing test plan will requires assuming too many input parameters which will lead to inefficient usage of resources.
-__Assumptions:__
+
+  __Assumptions:__
   - it is web application
   - time resource available: 1 hour. 15 minutes test setup, 30 minutes testing, 15 minutes for test notes and submitting issues. Further 1 hour available to automate the story providing there is a robust, easily extendable test framework available. Test data, test harnesses and CI/CD templates are also available.
 2. Prepare a short plan to formally cover AC provided.
 3. Question test plan on validity and prepare a recommendations for further exploratory tests based on risks for business and customers.
 4. Explore logs and history of existing, similar or neighbouring issues to to a short smoke regression test.
 
+-----
+
 **Q:** Specify exactly what steps you would run. And how you would assess success or failure of each test.
 
 **A: Test suite:**
 
-##### Test setup:
+#### Test setup:
 Create `User_receiver<N>` and `User_sender`, where `N` is a tuple of strings from `one` to `Five` (6 users in total)
 
-##### Test case 1.
-Verifies acceptance criteria 1, 2, 3, 4 and 5. Comment box and search user journey. __See the original PDF. Omitted due to copyright reasons.__
+#### Test case 1.
+Verifies acceptance criteria 1, 2, 3, 4 and 5. Comment box and search user journey. See the original PDF. Omitted due to copyright reasons.
 
 1. In different browsers or browser sessions (use incognito or private to disable cookies) open user `User_receiver` and `User_sender` message box.
 
@@ -40,7 +45,7 @@ Verifies acceptance criteria 1, 2, 3, 4 and 5. Comment box and search user journ
 
 6. Repeat 1-5 for edit comment, new and edit annotation
 
-##### Test case 2.
+#### Test case 2.
 Verifies AC 5, 6,7 and 8. Email notifications functionality.
 
 1. Setup test environment as per Test case 1 instructions.
@@ -73,17 +78,18 @@ Verifies AC 5, 6,7 and 8. Email notifications functionality.
 - email notifications should arrive with 100% reliability. Consider write a simple script to decide on reliability of responses and if the endpoint is responsive to the load.
 - consider a simple security checks from the current OWASP's top 10 list
 
+-----
 
 **Q:** Feel free to comment on the completeness or quality of the acceptance criteria.
 
 **A: Comments on AC**
 - doesn't specify if multi-language support is needed.
 - criterion of active user (session expired or other status indiction and means to test)
-- in #5 "existing functionality" missing reference data
--
-
+- in #5 "existing functionality" missing reference data on 'saving functionality'
 - After tapping @ the performance might be compromised due to many active users. AC doesn't specify this edge case scenario.
-- User name length
+- User name length is not defined
+
+-----
 
 **Q**: Additional information you will need before you can begin testing.
 
@@ -98,6 +104,9 @@ Verifies AC 5, 6,7 and 8. Email notifications functionality.
 - if tester can access the code or backend logs to utilise white box testing approach
 - was error handling, reporting and monitoring implemented?
 
+-----
+
+### Bonus ;)
 
 ### UI automated Test script example using webdriver driven by Python:
 
