@@ -144,7 +144,6 @@ test_case_1():
 ```
   // Consumer contract acceptance test suite
   // Test case 1. Verifies acceptance criteria 1
-
   var frisby = require('frisby');
   frisby.create('Get active user on typing /@ReceiverUserF')
     .get(baselink + mockupID)
@@ -154,4 +153,4 @@ test_case_1():
       place: function(val) { expect(val).toMatch("ReceiverUserFour"); }, //
     })
   .toss();
-  ```
+```
