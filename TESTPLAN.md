@@ -5,20 +5,23 @@ Develop a test plan for the following user story:
 
 **Q:** How would you test this story?
 
-**A: **
+**A: Approach**
+1. I'd gather more background information first, as this story is clearly taken from the bigger context. Without that information preparing test plan will requires assuming too many input parameters which will lead to inefficient usage of resources.
+__Assumptions:__
+  - it is web application
+  - time resource available: 1 hour. 15 minutes test setup, 30 minutes testing, 15 minutes for test notes and submitting issues. Further 1 hour available to automate the story providing there is a robust, easily extendable test framework available. Test data, test harnesses and CI/CD templates are also available.
+2. Prepare a short plan to formally cover AC provided.
+3. Question test plan on validity and prepare a recommendations for further exploratory tests based on risks for business and customers.
+4. Explore logs and history of existing, similar or neighbouring issues to to a short smoke regression test.
 
-**Q:** Specify exactly what steps you would run.
-
-**A: **
-
-**Q:** How you would assess success or failure of each test.
+**Q:** Specify exactly what steps you would run. And how you would assess success or failure of each test.
 
 **A: **
 
 **Q:** Feel free to comment on the completeness or quality of the acceptance criteria.
 
 **A: Comments on AC**
-- doesn't specify multi-language support.
+- doesn't specify if multi-language support is needed.
 - criterion of active user (session expired or other status indiction and means to test)
 - in #5 "existing functionality" missing reference data
 -
@@ -39,9 +42,7 @@ Develop a test plan for the following user story:
 - if tester can access the code or backend logs to utilise white box testing approach
 - was error handling, reporting and monitoring implemented?
 
-## Assumptions:
-- it is web application
-- time resource proposed: 1 hour. 15 minutes test setup, 30 minutes testing, 15 minutes for test notes and submitting issues
+
 
 
 
