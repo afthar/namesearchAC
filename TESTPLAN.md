@@ -28,7 +28,7 @@ comment gets actions faster.
 - in #5 "existing functionality" missing reference data
 -
 
-- After tapping @ the performance might be detoriated due to many active users. AC doesn't specify this edge case senario.
+- After tapping @ the performance might be compromised due to many active users. AC doesn't specify this edge case scenario.
 - User name length
 
 
@@ -50,6 +50,7 @@ Create User_receiver<N> and User_sender, where N is from 'one'...'Five' (6 users
 
 
 ### UI automated Test script example using webdriver driven by Python:
+
 ```
 test_setup():
   for postfix in ['one', 'two', 'three', 'four']
@@ -79,14 +80,13 @@ test_case_1():
   ```
   baselink = 'http://www.mocky.io/v2/'
   mockupID = '5185415ba171ea3a00704eed'
-  // mockup endpooint was generated using mocky.io on 28 April. It may expire in a whipe
+  // mockup endpoint was generated using mocky.io on 28 April. It may expire in a while
 
-
-  // Consumer contract acceptane test suite
+```
+  // Consumer contract acceptance test suite
 
   // Test case 1. Verifies acceptane criteria 1: return active user on tapping '@ReceiverUserF'
 
-```
   var frisby = require('frisby');
   frisby.create('Get active user on typing /@ReceiverUserF')
     .get(baselink + mockupID)
