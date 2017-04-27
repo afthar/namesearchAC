@@ -66,6 +66,13 @@ Verifies AC 5, 6,7 and 8. Email notifications functionality.
     - [ ] previously tagged user doesn't receive email notifications
     - [ ] new user receive notification
 
+**After** completing above test script conduct exploratory testing keeping in mind business logic and workflow.
+ Focus on:
+- any regressions which affect existing `save` functionality;
+- open browser in development mode to see what search requests are coming out and what responses coming in to spot any errors or massive sets of data flowing around.
+- email notifications should arrive with 100% reliability. Consider write a simple script to decide on reliability of responses and if the endpoint is responsive to the load.
+- consider a simple security checks from the current OWASP's top 10 list
+
 
 **Q:** Feel free to comment on the completeness or quality of the acceptance criteria.
 
