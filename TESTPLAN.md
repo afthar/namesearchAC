@@ -21,7 +21,8 @@ __Assumptions:__
 ##### Test setup:
 Create `User_receiver<N>` and `User_sender`, where `N` is a tuple of strings from `one` to `Five` (6 users in total)
 
-##### Test case:
+##### Test case 1.
+Verifies acceptance criteria 1, 2, 3, 4 and 5. Comment box and search user journey. __See the original PDF. Omitted due to copyright reasons.__
 
 1. In different browsers or browser sessions (use incognito or private to disable cookies) open user `User_receiver` and `User_sender` message box.
 
@@ -38,6 +39,33 @@ Create `User_receiver<N>` and `User_sender`, where `N` is a tuple of strings fro
   >- [ ] Pass if user is of different colour
 
 6. Repeat 1-5 for edit comment, new and edit annotation
+
+##### Test case 2.
+Verifies AC 5, 6,7 and 8. Email notifications functionality.
+
+1. Setup test environment as per Test case 1 instructions.
+
+2. As per test case instructions send a message tagging existing active user in a new comment.
+  > pass if:
+    - [ ] receiving user receive notification email within a reasonable time.
+    - [ ] email structure as per AC 6 a and b criteria.
+
+3. When receiving the notification email click on the link attached
+  > pass if:
+    - [ ] link leads to the relevant comment or annotation.
+    - [ ] the link is working in:
+      - [ ] chrome browser
+      - [ ] Firefox
+      - [ ] safari
+      - [ ] IE
+      - [ ] android native and google's mail agents
+      - [ ] iphone native mail agent
+
+4. Repeat 2 for existing comment or annotation tagging a new active user
+  > pass if
+    - [ ] previously tagged user doesn't receive email notifications
+    - [ ] new user receive notification
+
 
 **Q:** Feel free to comment on the completeness or quality of the acceptance criteria.
 
